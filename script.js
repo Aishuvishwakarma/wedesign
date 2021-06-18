@@ -91,11 +91,11 @@ $('.videosection h2').textillate({
 })
 gsap.to('.back .box',{
     scrollTrigger : {
-        trigger : '.gallery',
-        start:'top 50%',
+        trigger : '.media',
+        start:'top 100%',
         toggleActions: 'play pause resume reverse',
     },
-    transform: 'perspective(1000px) rotateX(90deg) rotateZ(90deg) rotateY(180deg)',
+    transform: 'perspective(1000px) rotateX(0deg) rotateZ(90deg) rotateY(180deg)',
     stagger :.5,
     duration : 3
 })
