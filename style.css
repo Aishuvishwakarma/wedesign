@@ -405,21 +405,22 @@ color: #fff;
     height: 200px;
     background-color: #000;
     overflow: hidden;
-    animation: animate3 50s infinite;
+    transform: translateX(0);
+    /* animation: animate3 50s infinite; */
 }
 #media2 .container .medias .imgbx img{
     object-fit: cover;
     width: 250px;
     height: 200px;
 }
-@keyframes animate3{
+/* @keyframes animate3{
     0%{
         transform: translateX(0);
     }
     100%{
         transform: translateX(-500px);
     }
-}
+} */
 #imgbx1{
     top: 10%;
     left: 50%;
