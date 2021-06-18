@@ -88,18 +88,6 @@ nav .menu .bar:nth-child(1){
     transform: rotateY(90deg) translateX(25px) translateZ(-25px) perspective(1000px) rotateX(0deg);
 }
 
-/* .back .box span::part{
-    content: '' ;
-    width: 50px;
-    height: 70px;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background-color: #fff;
-    background: linear-gradient(45deg,rgb(49, 49, 49),rgb(129, 129, 129));
-    transform: rotateX(45deg) translateZ(100px);
-} */
-
 @keyframes animate{
     0%{
         transform: perspective(1000px) rotateX(0deg) rotateY(90deg);

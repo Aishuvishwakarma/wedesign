@@ -10,17 +10,14 @@ window.addEventListener('mousemove', function(details){
 })
 
 document.addEventListener('mousemove',function(e){
-    console.log(e.clientX)
     let bx = document.querySelector('.box');
     if(e.clientX < 600 || e.clientY < 200){
         bx.style.transform = 'rotateY(-90deg) rotateX(-25deg)';
     }else{
         bx.style.transform = 'rotateY(80deg)  rotateX(25deg)';
     }
-    // bx.style.transform = 100 + e.pageX/100 + '%';
-    // bx.style.left = 100 +  e.pageX/2.5 + 'px';
-    // bx.style.right = 100 +  e.pageX/2.5 + 'px';
 })
+
 
 // document.querySelector('body').addEventListener('mousemove', rotatebx)
 
@@ -92,6 +89,16 @@ $('.videosection h2').textillate({
         effect: 'fadeOutRight',
     }
 })
+gsap.to('.back .box',{
+    scrollTrigger : {
+        trigger : '.gallery',
+        start:'top 50%',
+        toggleActions: 'play pause resume reverse',
+    },
+    transform: 'perspective(1000px) rotateX(90deg) rotateZ(90deg) rotateY(180deg)',
+    stagger :.5,
+    duration : 3
+})
 gsap.to('.fader',{
     scrollTrigger : {
         trigger : '.gallery',
@@ -110,7 +117,7 @@ gsap.to('.gallery .box',{
         toggleActions: 'play pause resume reverse',
     },
     opacity :0,
-    y : -100,
+    y : -80,
     stagger :.3,
     duration : 2
 })
