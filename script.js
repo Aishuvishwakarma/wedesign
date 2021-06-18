@@ -99,75 +99,75 @@ gsap.to('.back .box',{
     stagger :.5,
     duration : 3
 })
-gsap.to('.fader',{
-    scrollTrigger : {
-        trigger : '.gallery',
-        start:'top 100%',
-        toggleActions: 'play pause resume reverse',
-    },
-    opacity :0,
-    y : -100,
-    stagger :.3,
-    duration : 1
-})
-gsap.to('.gallery .box',{
-    scrollTrigger : {
-        trigger : '.media',
-        start:'top 90%',
-        toggleActions: 'play pause resume reverse',
-    },
-    opacity :0,
-    y : -80,
-    stagger :.3,
-    duration : 2
-})
+// gsap.to('.fader',{
+//     scrollTrigger : {
+//         trigger : '.gallery',
+//         start:'top 100%',
+//         toggleActions: 'play pause resume reverse',
+//     },
+//     opacity :0,
+//     y : -100,
+//     stagger :.3,
+//     duration : 1
+// })
+// gsap.to('.gallery .box',{
+//     scrollTrigger : {
+//         trigger : '.media',
+//         start:'top 90%',
+//         toggleActions: 'play pause resume reverse',
+//     },
+//     opacity :0,
+//     y : -80,
+//     stagger :.3,
+//     duration : 2
+// })
 
-gsap.to('.videosection .video',{
-    scrollTrigger : {
-        trigger : '#desc',
-        start:'top 80%',
-        toggleActions: 'play pause resume reverse',
-    },
-    opacity :0,
-    y : -100,
-    stagger :.3,
-    duration : 2
-})
-gsap.to('.videosection h2',{
-    scrollTrigger : {
-        trigger : '#desc',
-        start:'top 70%',
-        toggleActions: 'play pause resume reverse',
-    },
-    opacity :0,
-    y : -100,
-    stagger :.3,
-    duration : 2
-})
+// gsap.to('.videosection .video',{
+//     scrollTrigger : {
+//         trigger : '#desc',
+//         start:'top 80%',
+//         toggleActions: 'play pause resume reverse',
+//     },
+//     opacity :0,
+//     y : -100,
+//     stagger :.3,
+//     duration : 2
+// })
+// gsap.to('.videosection h2',{
+//     scrollTrigger : {
+//         trigger : '#desc',
+//         start:'top 70%',
+//         toggleActions: 'play pause resume reverse',
+//     },
+//     opacity :0,
+//     y : -100,
+//     stagger :.3,
+//     duration : 2
+// })
 
-gsap.to('.extFade',{
-    scrollTrigger : {
-        trigger : '#media2',
-        start:'top 70%',
-        toggleActions: 'play pause resume reverse',
-    },
-    opacity :0,
-    y : -100,
-    stagger :.3,
-    duration : 2
-})
+// gsap.to('.extFade',{
+//     scrollTrigger : {
+//         trigger : '#media2',
+//         start:'top 70%',
+//         toggleActions: 'play pause resume reverse',
+//     },
+//     opacity :0,
+//     y : -100,
+//     stagger :.3,
+//     duration : 2
+// })
 
-gsap.to('#media2 .container .medias .imgbx',{
-    scrollTrigger : {
-        trigger : '.footer',
-        start:'top 100%',
-        toggleActions: 'play pause resume reverse',
-    },
-    opacity :0,
-    X : -50,
-    stagger :.3,
-    duration : 2
-})
+// gsap.to('#media2 .container .medias .imgbx',{
+//     scrollTrigger : {
+//         trigger : '.footer',
+//         start:'top 100%',
+//         toggleActions: 'play pause resume reverse',
+//     },
+//     opacity :0,
+//     X : -50,
+//     stagger :.3,
+//     duration : 2
+// })
 // gsap.to('.videosSctn .video',{
 //     scrollTrigger : {
 //         trigger : '#media2',

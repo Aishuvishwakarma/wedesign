@@ -56,6 +56,7 @@ nav .menu .bar{
 nav .menu .bar:nth-child(1){
     margin-bottom: 5px;
 }
+
 .back .box{
     position: fixed;
     width: 50px;
@@ -224,7 +225,7 @@ section .box span{
     left: 0;
     bottom: 0;
     width: 100%;
-    min-height: 110%;
+    min-height: 100%;
     background-color: #fff;
     z-index: 5;
     display: flex;
@@ -269,7 +270,7 @@ color: #fff;
 #desc{
     position: relative;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
 }
 #desc .container{
     position: absolute;
@@ -281,16 +282,20 @@ color: #fff;
     background-color: rgba(0, 0, 0, 0.342);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     z-index: 5;
 }
 #desc .container .links{
-    width: 60%;
+    width: 45%;
     margin: 0 auto;
-    height: 70px;
+    height: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+#desc .container .links:nth-child(1){
+   justify-content: space-between; 
 }
 #desc .container .links h2{
     font-size: 3rem;
