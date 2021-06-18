@@ -9,6 +9,40 @@ window.addEventListener('mousemove', function(details){
     }, 100)
 })
 
+document.addEventListener('mousemove',function(e){
+    console.log(e.clientX)
+    let bx = document.querySelector('.box');
+    if(e.clientX < 600 || e.clientY < 200){
+        bx.style.transform = 'rotateY(-90deg) rotateX(-25deg)';
+    }else{
+        bx.style.transform = 'rotateY(80deg)  rotateX(25deg)';
+    }
+    // bx.style.transform = 100 + e.pageX/100 + '%';
+    // bx.style.left = 100 +  e.pageX/2.5 + 'px';
+    // bx.style.right = 100 +  e.pageX/2.5 + 'px';
+})
+
+// document.querySelector('body').addEventListener('mousemove', rotatebx)
+
+// function rotatebx(){
+//     var box = document.querySelector('.box')
+//     box.forEach(function(bx){
+//         let x = (bx.getBoundingClientReat().left) + (bx.ClientWidth / 2);
+//         let y = (bx.getBoundingClientreat().top) + (bx.ClientHeight / 2);
+//         let radian = Math.atan2(event.pageX - x, event.pageY - y);
+//         let rot = (radian * (180 / Math.PI) * -1) + 270;
+//         bx.style.transform = "rotate("+rot+"deg)"
+//     })
+// }
+// var follwX = 0, followY = 0,x = 0,y = 0,friction = 1/ 30;
+
+// function moveCrcl(){
+//     x += (follwX - x) * friction;
+//     y += (follwY - y) * friction;
+//     translate = 'translate(' + x + 'px, ' + y +'px) scale(1.1)';
+//     window.requestAnimationFrame(moveCrcl)
+// }
+
 let sidebar = document.querySelector('.sidebar');
 let menu = document.querySelector('.menu');
 let bar1 = document.querySelector('#bar1');
@@ -67,7 +101,7 @@ gsap.to('.fader',{
     opacity :0,
     y : -100,
     stagger :.3,
-    duration : 2
+    duration : 1
 })
 gsap.to('.gallery .box',{
     scrollTrigger : {
