@@ -59,11 +59,11 @@ nav .menu .bar:nth-child(1){
 
 .back .box{
     position: fixed;
-    width: 50px;
+    width: 70px;
     height: 70px;
     z-index: 1;
     transform-style: preserve-3d;
-    /* animation: animate 20s linear infinite; */
+    animation: animate 60s linear infinite;
     transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
     transition: 15s;
 }
@@ -75,7 +75,7 @@ nav .menu .bar:nth-child(1){
     top: 0%;
     left: 0%;
     background: linear-gradient(45deg,rgb(49, 49, 49),rgb(129, 129, 129));
-    transform: rotateY(90deg) translateX(25px) translateZ(25px);
+    transform: rotateY(90deg) translateX(25px) translateZ(45px);
 }
 
 .back .box span::after{
@@ -86,14 +86,15 @@ nav .menu .bar:nth-child(1){
     top: 0%;
     left: 0%;
     background: linear-gradient(45deg,rgb(49, 49, 49),rgb(99, 87, 87));
-    transform: rotateY(90deg) translateX(25px) translateZ(-25px) perspective(1000px) rotateX(0deg);
+    transform: rotateY(90deg) translateX(25px) translateZ(-25px);
 }
 
 @keyframes animate{
     0%{
-        transform: perspective(1000px) rotateX(0deg) rotateY(90deg);
-    }100%{
-        transform: perspective(1000px) rotateX(0deg) rotateY(180deg);
+        transform: perspective(1000px) rotateZ(0deg) rotateX(0deg) rotateY(45deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateZ(45deg) rotateX(45deg) rotateY(180deg);
     }
 }
 .box .shadow{
@@ -110,6 +111,7 @@ nav .menu .bar:nth-child(1){
     box-shadow: 0 0 150px 200px rgba(255, 255, 255, 0.226);
     border-radius: 50%;
 }
+
 .box span{
     position: fixed;
     top:0%;

@@ -9,14 +9,28 @@ window.addEventListener('mousemove', function(details){
     }, 100)
 })
 
-document.addEventListener('mousemove',function(e){
+ document.addEventListener('mousemove',function(e) {
     let bx = document.querySelector('.box');
+    console.log(e.clientX,e.clientY)
     if(e.clientX < 600 || e.clientY < 200){
-        bx.style.transform = 'rotateY(-90deg) rotateX(-25deg)';
+        bx.style.transform = 'perspective(1000px) rotateY(-90deg) rotateX(-25deg)';
+        bx.style.animation = 'none';
     }else{
-        bx.style.transform = 'rotateY(80deg)  rotateX(25deg)';
+        bx.style.animation = 'none';
+        bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateX(90deg)';
     }
-})
+}
+)
+document.addEventListener('mouseleave',function(e) {
+    let bx = document.querySelector('.box');
+    bx.style.transform = 'none';
+    bx.style.animation = 'animate 60s linear infinite';
+}
+)
+// setTimeout(() => {
+//     let bx = document.querySelector('.box');
+//     bx.style.animation = 'animate 20s linear infinite';
+// }, 5);
 
 
 // document.querySelector('body').addEventListener('mousemove', rotatebx)
