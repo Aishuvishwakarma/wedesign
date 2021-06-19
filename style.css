@@ -63,7 +63,7 @@ nav .menu .bar:nth-child(1){
     height: 70px;
     z-index: 1;
     transform-style: preserve-3d;
-    animation: animate 60s linear infinite;
+    animation: animate 60s infinite;
     transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
     transition: 15s;
 }
@@ -120,7 +120,7 @@ nav .menu .bar:nth-child(1){
     height: 100%;
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateX(calc(var(--i) * 20deg)) translateZ(200px);
+    transform: rotateX(calc(var(--i) * 15deg)) translateZ(250px);
 }
 .box span .elem{
     background: linear-gradient(45deg,rgb(49, 49, 49),rgb(129, 129, 129));

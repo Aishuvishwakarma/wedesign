@@ -11,14 +11,26 @@ window.addEventListener('mousemove', function(details){
 
  document.addEventListener('mousemove',function(e) {
     let bx = document.querySelector('.box');
-    console.log(e.clientX,e.clientY)
-    if(e.clientX < 600 || e.clientY < 200){
+    if(e.clientX < 650 || e.clientY < 150){
         bx.style.transform = 'perspective(1000px) rotateY(-90deg) rotateX(-25deg)';
         bx.style.animation = 'none';
     }else{
         bx.style.animation = 'none';
         bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateX(90deg)';
     }
+}
+)
+document.addEventListener('mouseup',function(e) {
+    let bx = document.querySelector('.box');
+    console.log(e.clientY)
+    if(e.clientY < 150){
+        bx.style.animation = 'none';
+        bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(45deg)';
+    }else{
+        bx.style.animation = 'none';
+        bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(-45deg)';
+    }
+    
 }
 )
 document.addEventListener('mouseleave',function(e) {
@@ -109,7 +121,7 @@ gsap.to('.back .box',{
         start:'top 100%',
         toggleActions: 'play pause resume reverse',
     },
-    transform: 'perspective(1000px) rotateX(0deg) rotateZ(90deg) rotateY(180deg)',
+    animation: 'animate 60s linear infinite',
     stagger :.5,
     duration : 3
 })
