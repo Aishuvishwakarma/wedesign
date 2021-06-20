@@ -22,13 +22,6 @@ window.addEventListener('mousemove', function(details){
         bx.style.animation = 'none';
         bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateX(90deg)';
     }
-    setTimeout(() => {
-        if(e.pageX === e.screenX){
-            let bx = document.querySelector('.box');
-            bx.style.transform = 'none';
-           bx.style.animation = 'animate 60s linear infinite';
-        }
-    }, 6000);
 }
 )
 document.addEventListener('mouseup',function(e) {
@@ -40,6 +33,17 @@ document.addEventListener('mouseup',function(e) {
         bx.style.animation = 'none';
         bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(-45deg)';
     }
+    
+}
+)
+document.addEventListener('mouseover',function(e) {
+    setTimeout(() => {
+        if(e.pageX === e.screenX){
+            let bx = document.querySelector('.box');
+            bx.style.transform = 'none';
+           bx.style.animation = 'animate 60s linear infinite';
+        }
+    }, 3000);   
     
 }
 )
