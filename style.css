@@ -62,10 +62,14 @@ nav .menu .bar:nth-child(1){
     width: 70px;
     height: 70px;
     z-index: 1;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     animation: animate 60s infinite;
+    -webkit-animation: animate 60s infinite ;
+    -webkit-transform:  perspective(1000px) rotateX(0deg) rotateY(35deg) ;
     transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
-    transition: 15s;
+    transition: 20s;
+    -webkit-transition: 20s;
 }
 .back .box span::before{
     content: '' ;
@@ -76,6 +80,7 @@ nav .menu .bar:nth-child(1){
     left: 0%;
     background: linear-gradient(45deg,rgb(49, 49, 49),rgb(129, 129, 129));
     transform: rotateY(90deg) translateX(25px) translateZ(45px);
+    -webkit-transform: rotateY(90deg) translateX(25px) translateZ(45px);
 }
 
 .back .box span::after{
@@ -87,14 +92,17 @@ nav .menu .bar:nth-child(1){
     left: 0%;
     background: linear-gradient(45deg,rgb(49, 49, 49),rgb(99, 87, 87));
     transform: rotateY(90deg) translateX(25px) translateZ(-25px);
+    -webkit-transform: rotateY(90deg) translateX(25px) translateZ(-25px);
 }
 
 @keyframes animate{
     0%{
         transform: perspective(1000px) rotateZ(0deg) rotateX(0deg) rotateY(45deg);
+        -webkit-transform: perspective(1000px) rotateZ(0deg) rotateX(0deg) rotateY(45deg);
     }
     100%{
         transform: perspective(1000px) rotateZ(45deg) rotateX(45deg) rotateY(180deg);
+        -webkit-transform: perspective(1000px) rotateZ(45deg) rotateX(45deg) rotateY(180deg) ;
     }
 }
 .box .shadow{
@@ -120,7 +128,9 @@ nav .menu .bar:nth-child(1){
     height: 100%;
     transform-origin: center;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     transform: rotateX(calc(var(--i) * 15deg)) translateZ(250px);
+    -webkit-transform: rotateX(calc(var(--i) * 15deg)) translateZ(250px);
 }
 .box span .elem{
     background: linear-gradient(45deg,rgb(49, 49, 49),rgb(129, 129, 129));

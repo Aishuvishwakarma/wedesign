@@ -7,6 +7,10 @@ window.addEventListener('mousemove', function(details){
         circle.style.top = yValue + 'px';
         circle.style.left = xValue + 'px';
     }, 100)
+    // let bx = document.querySelector('.box');
+    //     bx.style.transform = 'none';
+    //    bx.style.animation = 'animate 60s linear infinite';
+       
 })
 
  document.addEventListener('mousemove',function(e) {
@@ -18,11 +22,17 @@ window.addEventListener('mousemove', function(details){
         bx.style.animation = 'none';
         bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateX(90deg)';
     }
+    setTimeout(() => {
+        if(e.pageX === e.screenX){
+            let bx = document.querySelector('.box');
+            bx.style.transform = 'none';
+           bx.style.animation = 'animate 60s linear infinite';
+        }
+    }, 6000);
 }
 )
 document.addEventListener('mouseup',function(e) {
     let bx = document.querySelector('.box');
-    console.log(e.clientY)
     if(e.clientY < 150){
         bx.style.animation = 'none';
         bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(45deg)';
@@ -33,12 +43,14 @@ document.addEventListener('mouseup',function(e) {
     
 }
 )
+
 document.addEventListener('mouseleave',function(e) {
     let bx = document.querySelector('.box');
-    bx.style.transform = 'none';
-    bx.style.animation = 'animate 60s linear infinite';
-}
+        bx.style.transform = 'none';
+       bx.style.animation = 'animate 60s linear infinite';
+    }
 )
+
 // setTimeout(() => {
 //     let bx = document.querySelector('.box');
 //     bx.style.animation = 'animate 20s linear infinite';
