@@ -12,75 +12,54 @@ window.addEventListener('mousemove', function(details){
     //    bx.style.animation = 'animate 60s linear infinite';
        
 })
-
+console.log(window,document)
  document.addEventListener('mousemove',function(e) {
     let bx = document.querySelector('.box');
-    if(e.clientX < 650 || e.clientY < 150){
-        bx.style.transform = 'perspective(1000px) rotateY(-90deg) rotateX(-25deg)';
-        bx.style.animation = 'none';
-    }else{
-        bx.style.animation = 'none';
-        bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateX(90deg)';
-    }
+    bx.style.transform = 'none';
+    bx.style.animation = 'animate 40s  infinite';
+
 }
 )
 document.addEventListener('mouseup',function(e) {
     let bx = document.querySelector('.box');
-    if(e.clientY < 150){
+    if(e.clientY < 100){
         bx.style.animation = 'none';
         bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(45deg)';
     }else{
         bx.style.animation = 'none';
-        bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(-45deg)';
+        bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(45deg)'; 
     }
-    
 }
 )
-document.addEventListener('mouseover',function(e) {
-    setTimeout(() => {
-        if(e.pageX === e.screenX){
-            let bx = document.querySelector('.box');
-            bx.style.transform = 'none';
-           bx.style.animation = 'animate 60s linear infinite';
-        }
-    }, 3000);   
-    
-}
-)
-
-document.addEventListener('mouseleave',function(e) {
+document.addEventListener('mousdown',function(e) {
     let bx = document.querySelector('.box');
-        bx.style.transform = 'none';
-       bx.style.animation = 'animate 60s linear infinite';
+    console.log(e)
+    if(e.clientX > 500){
+        bx.style.animation = 'none';
+        bx.style.transform = 'perspective(1000px) rotateY(145deg)  rotateX(0deg)';
+    }else{
+        bx.style.animation = 'none';
+        bx.style.transform = 'perspective(1000px) rotateY(0deg)  rotateX(0deg)';
     }
+}
 )
-
-// setTimeout(() => {
+let bx = document.querySelector('.box');
+bx.addEventListener('mouseover',function(e){
+    console.log(e)
+    bx.style.animation = 'none';
+    if(e.clientY < 150 || e.clientX < 450){
+        bx.style.transform = 'perspective(1000px) rotateY(80deg) rotateX(45deg) rotateZ(45deg)';
+    }else{
+            bx.style.transform = 'perspective(1000px) rotateY(80deg) rotateX(-45deg) rotateZ(-45deg)';
+    }
+})
+document.addEventListener('mouseleave',function(e){
+    bx.style.transform = 'none';
+    bx.style.animation = 'animate 40s  infinite';
+})
 //     let bx = document.querySelector('.box');
 //     bx.style.animation = 'animate 20s linear infinite';
 // }, 5);
-
-
-// document.querySelector('body').addEventListener('mousemove', rotatebx)
-
-// function rotatebx(){
-//     var box = document.querySelector('.box')
-//     box.forEach(function(bx){
-//         let x = (bx.getBoundingClientReat().left) + (bx.ClientWidth / 2);
-//         let y = (bx.getBoundingClientreat().top) + (bx.ClientHeight / 2);
-//         let radian = Math.atan2(event.pageX - x, event.pageY - y);
-//         let rot = (radian * (180 / Math.PI) * -1) + 270;
-//         bx.style.transform = "rotate("+rot+"deg)"
-//     })
-// }
-// var follwX = 0, followY = 0,x = 0,y = 0,friction = 1/ 30;
-
-// function moveCrcl(){
-//     x += (follwX - x) * friction;
-//     y += (follwY - y) * friction;
-//     translate = 'translate(' + x + 'px, ' + y +'px) scale(1.1)';
-//     window.requestAnimationFrame(moveCrcl)
-// }
 
 let sidebar = document.querySelector('.sidebar');
 let menu = document.querySelector('.menu');
