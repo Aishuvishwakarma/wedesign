@@ -12,7 +12,7 @@ window.addEventListener('mousemove', function(details){
     //    bx.style.animation = 'animate 60s linear infinite';
        
 })
-console.log(window,document)
+
  document.addEventListener('mousemove',function(e) {
     let bx = document.querySelector('.box');
     bx.style.transform = 'none';
@@ -22,36 +22,45 @@ console.log(window,document)
 )
 document.addEventListener('mouseup',function(e) {
     let bx = document.querySelector('.box');
-    if(e.clientY < 100){
-        bx.style.animation = 'none';
-        bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(45deg)';
-    }else{
-        bx.style.animation = 'none';
-        bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(45deg)'; 
-    }
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 45;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 45;
+  bx.style.transform = `perspective(1000px)  rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    // if(e.clientY < 100){
+    //     bx.style.animation = 'none';
+    //     bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(45deg)';
+    // }else{
+    //     bx.style.animation = 'none';
+    //     bx.style.transform = 'perspective(1000px) rotateY(80deg)  rotateZ(45deg)'; 
+    // }
 }
 )
 document.addEventListener('mousdown',function(e) {
     let bx = document.querySelector('.box');
     console.log(e)
-    if(e.clientX > 500){
-        bx.style.animation = 'none';
-        bx.style.transform = 'perspective(1000px) rotateY(145deg)  rotateX(0deg)';
-    }else{
-        bx.style.animation = 'none';
-        bx.style.transform = 'perspective(1000px) rotateY(0deg)  rotateX(0deg)';
-    }
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 45;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 45;
+  bx.style.transform = `perspective(1000px)  rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    // if(e.clientX > 500){
+    //     bx.style.animation = 'none';
+    //     bx.style.transform = 'perspective(1000px) rotateY(145deg)  rotateX(0deg)';
+    // }else{
+    //     bx.style.animation = 'none';
+    //     bx.style.transform = 'perspective(1000px) rotateY(0deg)  rotateX(0deg)';
+    // }
 }
 )
 let bx = document.querySelector('.box');
 bx.addEventListener('mouseover',function(e){
     console.log(e)
     bx.style.animation = 'none';
-    if(e.clientY < 150 || e.clientX < 450){
-        bx.style.transform = 'perspective(1000px) rotateY(80deg) rotateX(45deg) rotateZ(45deg)';
-    }else{
-            bx.style.transform = 'perspective(1000px) rotateY(80deg) rotateX(-45deg) rotateZ(-45deg)';
-    }
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 45;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 45;
+  bx.style.transform = `perspective(1000px)  rotateY(${xAxis}deg) rotateX(${yAxis}deg) rotateZ(45deg)`;
+    // if(e.clientY < 150 || e.clientX < 450){
+    //     bx.style.transform = 'perspective(1000px) rotateY(80deg) rotateX(45deg) rotateZ(45deg)';
+    // }else{
+    //         bx.style.transform = 'perspective(1000px) rotateY(80deg) rotateX(-45deg) rotateZ(-45deg)';
+    // }
 })
 document.addEventListener('mouseleave',function(e){
     bx.style.transform = 'none';
